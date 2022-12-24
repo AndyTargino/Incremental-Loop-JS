@@ -1,12 +1,12 @@
 function millisToMinutesAndSeconds(millis) {
-    var minutes = Math.floor(millis / 60000);
-    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    let minutes = Math.floor(millis / 60000);
+    let seconds = ((millis % 60000) / 1000).toFixed(0);
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
 }
 
 
 
-var setTimerLoopExecute = 500;
+let setTimerLoopExecute = 500;
 async function execLoop() {
     clearInterval(looping);
     function SetTimeLoopExecute(intervalToExecute) {
@@ -27,4 +27,4 @@ async function execLoop() {
         SetTimeLoopExecute(setTimerLoopExecute + 1000) // increment Time to loop
     }
 }
-var looping = setInterval(execLoop, setTimerLoopExecute);
+let looping = setInterval(execLoop, setTimerLoopExecute);
